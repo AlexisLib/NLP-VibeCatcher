@@ -10,12 +10,12 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from joblib import dump
 
-train_tweets = pd.read_csv('C:/Users/alexs\Desktop/out.csv')
+train_tweets = pd.read_csv('C:/Users/alexs\Desktop/train.csv', sep=',', header=0, encoding='latin-1')
 
 train_tweets = train_tweets[['label', 'tweet']]
 
 def text_processing(tweet):
-    # Generating the list of words in the tweet (hastags and other punctuations removed)
+    # Generating the list of words (hastags and punctuations removed)
     def form_sentence(tweet):
         tweet_blob = TextBlob(tweet)
         return ' '.join(tweet_blob.words)
@@ -69,4 +69,5 @@ print(accuracy_score(predictions, label_test))
 
 acc = str(accuracy_score(predictions, label_test))
 
-dump(pipeline, 'model/big-'+acc+'.pkl', compress=1)
+#Save model
+dump(pipeline, 'model/big-v2-'+acc+'.pkl', compress=1)

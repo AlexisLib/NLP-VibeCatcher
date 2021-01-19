@@ -6,7 +6,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from joblib import load
 
-test_tweets = pd.read_csv('C:/Users/alexs\Desktop/testpred.csv')
+test_tweets = pd.read_csv('C:/Users/alexs\Desktop/test.csv')
 
 test = test_tweets['tweet']
 
@@ -43,9 +43,9 @@ test_tweets['tweet_list'] = test_tweets['tweet'].apply(text_processing)
 
 test = test_tweets['tweet']
 
-pipeline = load('model/test1.pkl')
+pipeline = load('model/big-v2-0.759578125.pkl')
 
 predictions = pipeline.predict(test)
 
 output = pd.DataFrame(data={"label":test_tweets["label"],"id":test_tweets["id"],"Prediction":predictions})
-output.to_csv(path_or_buf="results.csv", index=False, quoting=3, sep=';')
+output.to_csv(path_or_buf="result/result_big_v2.csv", index=False, quoting=3, sep=';')
