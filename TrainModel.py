@@ -10,10 +10,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from joblib import dump
 
-train_tweets = pd.read_csv('C:/Users/alexs\Desktop/train.csv', sep=',', header=0, encoding='latin-1')
-
-train_tweets = train_tweets[['label', 'tweet']]
-
 def text_processing(tweet):
     # Generating the list of words (hastags and punctuations removed)
     def form_sentence(tweet):
@@ -43,14 +39,26 @@ def text_processing(tweet):
 
     return normalization(no_punc_tweet)
 
+train_tweets = pd.read_csv('C:/Users/alexs\Desktop/train.csv', sep=',', header=0, encoding='latin-1')
+
+train_tweets = train_tweets[['label', 'tweet']]
+
 train_tweets['tweet_list'] = train_tweets['tweet'].apply(text_processing)
 
 train_tweets[train_tweets['label'] == 1].drop('tweet', axis=1).head()
 
-X = train_tweets['tweet']
-y = train_tweets['label']
+#msg_train, msg_test, label_train, label_test = train_test_split(train_tweets['tweet'], train_tweets['label'], test_size=0.2)
 
-msg_train, msg_test, label_train, label_test = train_test_split(train_tweets['tweet'], train_tweets['label'], test_size=0.2)
+msg_train = train_tweets['tweet']
+label_train = train_tweets['label']
+
+test_tweets = pd.read_csv('C:/Users/alexs\Desktop/test.csv')
+test_tweets = test_tweets[['label', 'tweet']]
+test_tweets['tweet_list'] = test_tweets['tweet'].apply(text_processing)
+test_tweets[test_tweets['label'] == 1].drop('tweet', axis=1).head()
+
+msg_test = test_tweets['tweet']
+label_test = test_tweets['label']
 
 #Machine Learning Pipeline
 pipeline = Pipeline([
@@ -70,4 +78,4 @@ print(accuracy_score(predictions, label_test))
 acc = str(accuracy_score(predictions, label_test))
 
 #Save model
-dump(pipeline, 'model/big-v2-'+acc+'.pkl', compress=1)
+dump(pipeline, 'model/big-v3-'+acc+'.pkl', compress=1)
