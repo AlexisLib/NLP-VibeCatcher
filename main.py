@@ -3,6 +3,7 @@ import Predict
 import csv
 import random
 import sys
+import Data_Cleaner_en
 from text import text_processing
 
 def main():
@@ -14,6 +15,8 @@ def main():
         sys.exit()
 
     path = Tweeter.getTweets(hashtag, int(nbtweet), language)
+
+    Data_Cleaner_en.DataCleaner("pred", hashtag, path)
 
     pathpred = Predict.predict(hashtag, path)
 
