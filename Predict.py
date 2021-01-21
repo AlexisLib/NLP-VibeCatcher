@@ -1,51 +1,21 @@
 import pandas as pd
-from textblob import TextBlob
-import re
-from nltk.corpus import stopwords
-from nltk.stem.wordnet import WordNetLemmatizer
-from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from joblib import load
+from text import text_processing
 
-test_tweets = pd.read_csv('C:/Users/alexs\Desktop/test.csv')
+def predict(hashtag, path):
+    test_tweets = pd.read_csv(path, sep=',', header=0, encoding='latin-1')
 
-test = test_tweets['tweet']
+    test_tweets['tweet_list'] = test_tweets['tweet'].apply(text_processing)
 
-def text_processing(tweet):
-    # Generating the list of words in the tweet (hastags and other punctuations removed)
-    def form_sentence(tweet):
-        tweet_blob = TextBlob(tweet)
-        return ' '.join(tweet_blob.words)
+    test = test_tweets['tweet']
 
-    new_tweet = form_sentence(tweet)
+    pipeline = load('model/big-v3-0.760462355513902.pkl')
 
-    # Removing stopwords and words with unusual symbols
-    def no_user_alpha(tweet):
-        tweet_list = [ele for ele in tweet.split() if ele != 'user']
-        clean_tokens = [t for t in tweet_list if re.match(r'[^\W\d]*$', t)]
-        clean_s = ' '.join(clean_tokens)
-        clean_mess = [word for word in clean_s.split() if word.lower() not in stopwords.words('english')]
-        return clean_mess
+    predictions = pipeline.predict(test)
 
-    no_punc_tweet = no_user_alpha(new_tweet)
+    output = pd.DataFrame(data={"Prediction":predictions, "date":test_tweets["date"], "tweet":test_tweets["tweet"]})
+    output.to_csv(path_or_buf="result/Prediction_"+hashtag+".csv", index=False, quoting=3, sep=',', escapechar='\\')
 
-    # Normalizing the words in tweets
-    def normalization(tweet_list):
-        lem = WordNetLemmatizer()
-        normalized_tweet = []
-        for word in tweet_list:
-            normalized_text = lem.lemmatize(word, 'v')
-            normalized_tweet.append(normalized_text)
-        return normalized_tweet
+    pathout = "result/Prediction_"+hashtag+".csv"
 
-    return normalization(no_punc_tweet)
-
-test_tweets['tweet_list'] = test_tweets['tweet'].apply(text_processing)
-
-test = test_tweets['tweet']
-
-pipeline = load('model/big-v2-0.759578125.pkl')
-
-predictions = pipeline.predict(test)
-
-output = pd.DataFrame(data={"label":test_tweets["label"],"id":test_tweets["id"],"Prediction":predictions})
-output.to_csv(path_or_buf="result/result_big_v2.csv", index=False, quoting=3, sep=';')
+    return pathout
