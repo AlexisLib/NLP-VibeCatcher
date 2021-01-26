@@ -1,4 +1,4 @@
-abbreviations = {
+abbreviations_en = {
     "$" : " dollar ",
     "€" : " euro ",
     "4ao" : "for adults only",

@@ -2,12 +2,15 @@ import pandas as pd
 from joblib import load
 from text import text_processing
 
-def predict(hashtag, path):
+def predict(hashtag, path, language):
     test_tweets = pd.read_csv(path+"/Cleaned_"+hashtag+".csv", sep=',', header=0, encoding='utf-8')
 
     test = test_tweets['tweet']
 
-    pipeline = load('model/big-v4-0.75541875.pkl')
+    if language == "en":
+        pipeline = load('model/big-v4-0.75541875.pkl')
+    elif language == "fr":
+        pipeline = load('model/big-v4-0.75541875.pkl')
 
     predictions = pipeline.predict(test)
 
