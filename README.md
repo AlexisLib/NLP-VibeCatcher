@@ -6,18 +6,12 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[contributors-shield]: https://img.shields.io/github/contributors/AlexisLib/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/AlexisLib/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AlexisLib/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/AlexisLib/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/AlexisLib/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/AlexisLib/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AlexisLib/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/AlexisLib/repo/issues
-[license-shield]: https://img.shields.io/github/license/AlexisLib/repo.svg?style=for-the-badge
-[license-url]: https://github.com/AlexisLib/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/AlexisLib
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 <!-- PROJECT LOGO -->
@@ -156,15 +150,15 @@ Project Link: [https://github.com/AlexisLib/NLP-VibeCatcher](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/AlexisLib/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/AlexisLib/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AlexisLib/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/AlexisLib/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/AlexisLib/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/AlexisLib/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AlexisLib/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/AlexisLib/repo/issues
-[license-shield]: https://img.shields.io/github/license/AlexisLib/repo.svg?style=for-the-badge
-[license-url]: https://github.com/AlexisLib/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/AlexisLib/NLP-VibeCatcher.svg?style=for-the-badge
+[contributors-url]: https://github.com/AlexisLib/NLP-VibeCatcher/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AlexisLib/NLP-VibeCatcher.svg?style=for-the-badge
+[forks-url]: https://github.com/AlexisLib/NLP-VibeCatcher/network/members
+[stars-shield]: https://img.shields.io/github/stars/AlexisLib/NLP-VibeCatcher.svg?style=for-the-badge
+[stars-url]: https://github.com/AlexisLib/NLP-VibeCatcher/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AlexisLib/NLP-VibeCatcher.svg?style=for-the-badge
+[issues-url]: https://github.com/AlexisLib/NLP-VibeCatcher/issues
+[license-shield]: https://img.shields.io/github/license/AlexisLib/NLP-VibeCatcher.svg?style=for-the-badge
+[license-url]: https://github.com/AlexisLib/NLP-VibeCatcher/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/AlexisLib
+[linkedin-url]: https://www.linkedin.com/in/alexis-l-45864611a/
