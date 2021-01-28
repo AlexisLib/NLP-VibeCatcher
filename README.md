@@ -101,10 +101,10 @@ You need to get Python for run this project.
    ```
    
  2. Install core spacy
-   ```sh
-  python -m spacy download en_core_news_sm
-  python -m spacy download fr_core_news_sm
-   ```
+     ```sh
+    python -m spacy download en_core_news_sm
+    python -m spacy download fr_core_news_sm
+     ```
    
 
 <!-- USAGE EXAMPLES -->
