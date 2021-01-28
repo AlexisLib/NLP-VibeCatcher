@@ -31,15 +31,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/AlexisLib/NLP-VibeCatcher">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="image/VibeCatcher.png" alt="Logo">
   </a>
 
   <h3 align="center">VibeCatcher</h3>
 
   <p align="center">
     The aim of the Vibe Catcher project is to learn about the dominant sentiment evoked by a hashtag. From a user perspective, this will allow entering a hashtag in a search box and retrieving the general sentiment it evokes on social media Twitter and Instagram. The general sentiment will be returned under negative, neutral and positive percentage.
-    <br />
-    <a href="https://github.com/AlexisLib/NLP-VibeCatcher"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/AlexisLib/NLP-VibeCatcher">View Demo</a>
