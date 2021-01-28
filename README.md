@@ -73,9 +73,9 @@
   </a>
  </p>
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`AlexisLib`, `NLP-VibeCatcher`, `twitter_handle`, `email`, `VibeCatcher`, `The aim of the Vibe Catcher project is to learn about the dominant sentiment evoked by a hashtag. From a user perspective, this will allow entering a hashtag in a search box and retrieving the general sentiment it evokes on social media Twitter and Instagram. The general sentiment will be returned under negative, neutral and positive percentage.`
+
+The aim of the Vibe Catcher project is to learn about the dominant sentiment evoked by a hashtag. From a user perspective, this will allow entering a hashtag in a search box and retrieving the general sentiment it evokes on social media Twitter and Instagram. The general sentiment will be returned under negative, neutral and positive percentage.
+From a more technical point of view, it will therefore be necessary to retrieve the user's request first, then retrieve all the posts / tweets containing it from APIs (or other means of retrieval) of social networks. Then these posts will be analyzed using machine learning, sentiment classification, and the percentages returned to the user, these percentages represent the general appreciation of people who spoke by mentioning this hashtag.
 
 
 ### Built With
