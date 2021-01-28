@@ -82,9 +82,6 @@ From a more technical point of view, it will therefore be necessary to retrieve 
 ### Built With
 
 * [Python](https://www.python.org/)
-* []()
-* []()
-
 
 
 <!-- GETTING STARTED -->
@@ -94,11 +91,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You need to get Python for run this project.
 
 ### Installation
 
@@ -106,12 +99,13 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/AlexisLib/NLP-VibeCatcher.git
    ```
-2. Install NPM packages
+   
+ 2. Install core spacy
    ```sh
-   npm install
+  python -m spacy download en_core_news_sm
+  python -m spacy download fr_core_news_sm
    ```
-
-
+   
 
 <!-- USAGE EXAMPLES -->
 ## Usage
