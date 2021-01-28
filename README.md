@@ -105,6 +105,8 @@ You need to get Python for run this project.
     python -m spacy download en_core_news_sm
     python -m spacy download fr_core_news_sm
      ```
+     
+ 3. Run main.py
    
 
 <!-- USAGE EXAMPLES -->
