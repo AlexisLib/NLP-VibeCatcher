@@ -114,11 +114,14 @@ You need to get Python for run this project.
 
 <p align="center">
   <a href="https://github.com/AlexisLib/NLP-VibeCatcher">
-    <img src="image/result.png" alt="Logo">
+    <img src="image/result.JPG" alt="Logo">
   </a>
 </p>
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+- First step : you can choose a network, twitter or instagram.
+- Second Step : you can choose the hashtag you want to analyse.
+- Third step : you can choose the number of tweet / post you want for the analyse.
+- Final step : you can choose the language between english (en) or french (fr).
 
 
 
