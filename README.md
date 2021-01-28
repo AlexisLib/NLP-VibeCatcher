@@ -31,7 +31,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/AlexisLib/NLP-VibeCatcher">
-    <img src="image/VibeCatcher.png" alt="Logo" width="80" height="80">
+    <img src="image/VibeCatcher.png" alt="Logo">
   </a>
 
   <h3 align="center">VibeCatcher</h3>
