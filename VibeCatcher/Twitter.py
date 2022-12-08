@@ -4,10 +4,10 @@ import os
 from datetime import date
 
 def getTweets(hashtag, nbtweet, language):
-    consumer_key = 'BlAhYK7FLy0TLVwJ4Yos0CDjT'
-    consumer_secret = 's7RHZV4R777MixWYUnszNM6jV6OAUh3L2NPJfGMmNqrIygi5hx'
-    access_token = '2848499321-1dyNlM3cjKFQtvyuLcuKBokgB9xWdhYwoQl9LHu'
-    access_token_secret = 'l98NfSUyHdbNROoUaUnocPQeImxlnOlhszZa33RFfMYlH'
+    consumer_key = ''
+    consumer_secret = ''
+    access_token = ''
+    access_token_secret = ''
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
